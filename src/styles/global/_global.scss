@@ -1,0 +1,18 @@
+@import 'smart-grid';
+@import 'helpers';
+@import 'base-color';
+@import 'reset';
+
+.App{
+
+
+  &-wrapper{
+    @include container();
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &-row{
+    @include row-flex();
+  }
+}
