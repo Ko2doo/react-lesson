@@ -1,0 +1,41 @@
+// import global stylesheet
+@import '../../scss/smart-grid';
+@import '../../scss/base-color';
+@import '../../scss/helpers';
+
+.wrapp_page{
+  @include col();
+  @include size(10);
+  @include size-md(9);
+  @include size-sm(12);
+}
+
+.postSection{
+  display: flex;
+  flex-direction: column;
+
+  &_prev{
+    width: 100%;
+    height: rem(230);
+  }
+  
+  &_authorCard{
+    margin-top: rem(15);
+    display: flex;
+  }
+  
+  &_personalInfo{
+    display: flex;
+  }
+
+  &_authorAva{
+    display: inline-flex;
+    width: rem(150);
+    height: rem(150);
+  }
+
+  &_listInfo{
+    display: flex;
+    flex-direction: column;
+  }
+}

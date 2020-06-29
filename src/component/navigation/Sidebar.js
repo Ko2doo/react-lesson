@@ -2,12 +2,15 @@
 // чтобы наше приложение распознало JSX
 import React from 'react';
 
+// style's content.scss
+import styles from './Sidebar.module.scss';
+
 const Sidebar = () => {
   return (
     <React.Fragment>
-      <aside className="Sidebar">
-        <nav className="Sidebar-nav_item">
-          <ul className="Sidebar-list_item">
+      <aside className={styles.sidebar}>
+        <nav className={styles.nav_item}>
+          <ul>
             <li>
               <a href="#/">Profile</a>
             </li>

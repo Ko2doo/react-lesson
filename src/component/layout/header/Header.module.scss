@@ -1,0 +1,28 @@
+// import global stylesheet
+@import '../../scss/smart-grid';
+@import '../../scss/base-color';
+@import '../../scss/helpers';
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: rem(8) 0 rem(8);
+  margin-bottom: rem(8);
+  background-color: $nice-green;
+
+}
+
+.logo{
+  display: inline-flex;
+  width: rem(30);
+  height: rem(35);
+  margin-left: rem(12);
+}
+
+.info_item{
+  display: flex;
+  margin-right: rem(12);
+  @include font(em(16), 700);
+  text-transform: uppercase;
+}

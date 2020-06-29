@@ -2,6 +2,9 @@
 // чтобы наше приложение распознало JSX
 import React from 'react';
 
+//import style's
+// import styles from './Footer.module.scss';
+
 const Footer = () => {
   return (
     <React.Fragment>
