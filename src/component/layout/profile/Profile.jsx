@@ -3,13 +3,13 @@
 import React from 'react';
 
 //import style's
-import styles from './Content.module.scss';
+import styles from './Profile.module.scss';
 
 import titlePrev from '../../details/img/nice.jpg';
 import authorAva from '../../details/img/avatar.jpg';
 
 // component
-const Content = () => {
+const Profile = () => {
   return (
     <React.Fragment>
       <main className={styles.wrapp_page}>
@@ -34,4 +34,4 @@ const Content = () => {
   );
 }
 
-export default Content;
+export default Profile;
