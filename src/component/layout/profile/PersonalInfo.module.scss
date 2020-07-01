@@ -1,0 +1,35 @@
+// import global stylesheet
+@import '../../scss/smart-grid';
+@import '../../scss/base-color';
+@import '../../scss/helpers';
+
+.profile{
+  position: absolute;
+  bottom: rem(-95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 rem(20) 0 rem(20);
+}
+
+
+.user_avatar{
+  display: inline-flex;
+  width: rem(160);
+  height: rem(160);
+  object-fit: cover;
+  border-radius: 50%;
+  border: rem(8) solid $ava-border-col;
+}
+
+.user_name{
+  margin: rem(22) 0 rem(18);
+  @include font(em(24), 700);
+  color:$typography-default-col;
+}
+
+.user_posit{
+  display: inline-flex;
+  @include font(em(14), 400);
+  color: $nice-gray;
+}

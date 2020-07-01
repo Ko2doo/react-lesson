@@ -4,42 +4,26 @@
 @import '../../scss/helpers';
 
 .wrapp_page{
-  @include col();
-  @include size(10);
-  @include size-md(9);
-  @include size-sm(12);
-
-  margin-left: 0;
-  display: flex;
-  flex-grow: 1;
+  @include row-flex();
 }
 
-.postSection{
+.profileSection{
+  @include col();
+  @include size(12);
+  @include size-md(12);
+  @include size-sm(12);
+
+}
+
+.profileCover{
   display: flex;
-  flex-direction: column;
-
-  &_prev{
-    width: 100%;
-    height: rem(230);
-  }
-  
-  &_authorCard{
-    margin-top: rem(15);
-    display: flex;
-  }
-  
-  &_personalInfo{
-    display: flex;
-  }
-
-  &_authorAva{
-    display: inline-flex;
-    width: rem(150);
-    height: rem(150);
-  }
-
-  &_listInfo{
-    display: flex;
-    flex-direction: column;
-  }
+  max-width: 100%;
+  width: 100%;
+  height: rem(350);
+  position: relative;
+  background-color: $nice-white;
+  background-image: url("../../details/img/nice.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }

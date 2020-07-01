@@ -13,10 +13,11 @@ const Header = () => {
   return (
     <React.Fragment>
       <header className={styles.header}>
-        <img className={styles.logo} src="https://upload.wikimedia.org/wikipedia/commons/6/66/Android_robot.png" alt="my app logotype"/>
+        <span className={styles.logo}>
+          <FontAwesomeIcon icon="poo" />
+        </span>
         <p className={styles.info_item}>
-          Android Dev blog
-          <FontAwesomeIcon icon="hamburger" />
+          Shiiit blog
         </p>
       </header>
     </React.Fragment>

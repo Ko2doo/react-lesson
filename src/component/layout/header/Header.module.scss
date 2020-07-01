@@ -8,21 +8,20 @@
   align-items: center;
   justify-content: space-between;
   padding: rem(8) 0 rem(8);
-  margin-bottom: rem(8);
-  background-color: $nice-green;
+  background-color: $nice-black;
 
 }
 
 .logo{
   display: inline-flex;
-  width: rem(30);
-  height: rem(35);
+  font-size: em(30);
   margin-left: rem(12);
+  color: $nice-white;
 }
 
 .info_item{
   display: flex;
   margin-right: rem(12);
-  @include font(em(16), 700);
-  text-transform: uppercase;
+  @include font(em(18), 400);
+  color: $nice-white;
 }

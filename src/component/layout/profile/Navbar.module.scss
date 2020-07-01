@@ -1,0 +1,39 @@
+// import global stylesheet
+@import '../../scss/smart-grid';
+@import '../../scss/base-color';
+@import '../../scss/helpers';
+
+.navbar_item{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: rem(45);
+  position: absolute;
+  bottom: rem(20);
+  background-color: $nav-bckg;
+}
+
+.navbar_list{
+  display: flex;
+  flex-direction: row;
+
+  & > li > a{
+    display: flex;
+    align-items: center;
+    font-size: em(16);
+    margin-right: rem(32);
+    color: $link-col;
+
+      &:hover{
+        color: $link-hover-col;
+      }
+  }
+}
+
+.icon_default{
+  display: inline-flex;
+  margin-right: rem(8);
+  font-size: em(18);
+  color: $icon-default;
+}
