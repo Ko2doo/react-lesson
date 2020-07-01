@@ -1,0 +1,29 @@
+// import global stylesheet
+@import '../../../../scss/smart-grid';
+@import '../../../../scss/base-color';
+@import '../../../../scss/helpers';
+
+.section_wrapper{
+  @include row-flex();
+
+  padding: rem(22) 0 rem(35);
+}
+
+.settings_sidebar{
+  @include col();
+  @include size(3);
+  display: flex;
+  margin-top: rem(100);
+}
+
+.content_page{
+  @include col();
+  @include size(7);
+  display: flex;
+}
+
+.statusbar_sidebar{
+  @include col();
+  @include size(2);
+  display: flex;
+}

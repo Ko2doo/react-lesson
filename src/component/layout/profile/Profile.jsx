@@ -3,11 +3,13 @@
 import React from 'react';
 
 //import components
-import Navbar from './Navbar';
-import PersonalInfo from './PersonalInfo';
+import Navbar from './components/Navbar';
+import PersonalInfo from './components/PersonalInfo';
+import ProfileConstruct from './components/ProfileConstruct';
 
 //import style's
 import styles from './Profile.module.scss';
+
 
 // component
 const Profile = () => {
@@ -19,6 +21,8 @@ const Profile = () => {
             <Navbar />
             <PersonalInfo />
           </div>
+
+          <ProfileConstruct />
 
         </section>
       </main>

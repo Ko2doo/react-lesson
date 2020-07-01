@@ -3,9 +3,11 @@
 
 // This file reassigns standards
 
+$ff: 'Play';
+
 body,
 html{
-	// font-family: "Exo 2', sans-serif";
+	font-family: $ff;
 	font-size: 100%;
 	height: 100%;
 	background-color: ghostwhite;

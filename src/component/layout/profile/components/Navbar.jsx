@@ -4,7 +4,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 //Style's import
-import style from './Navbar.module.scss';
+import style from './css_module/Navbar.module.scss';
 
 const Navbar = () => {
   return (

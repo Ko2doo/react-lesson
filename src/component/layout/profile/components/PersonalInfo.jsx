@@ -1,12 +1,12 @@
 import React from 'react';
 
 //import icon
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 //Style's import
-import style from './PersonalInfo.module.scss';
+import style from './css_module/PersonalInfo.module.scss';
 
-import userAvatar from '../../details/img/avatar.jpg';
+import userAvatar from '../../../details/img/avatar.jpg';
 
 const PersonalInfo = () => {
   return (

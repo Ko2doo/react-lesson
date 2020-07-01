@@ -4,33 +4,38 @@
 @import '../scss/helpers';
 
 .sidebar{
-  @include col();
-  @include size(2);
-  @include size-md(3);
-  @include size-sm(12);
-
-  background-color: $nice-green;
+  display: flex;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 rem(22);
 }
 
 .nav_item{
+  width: 100%;
     
   & > ul{
     display: flex;
     flex-direction: column;
-    padding: 0 0 0 rem(8);
+    width: 100%;
 
     & > li{
-      margin: rem(6) 0 rem(6);
-
-      &:last-child{
-        margin-bottom: 0;
-      }
+      padding: rem(15) 0;
+      border-bottom: rem(1) solid $link-border-col;
     }
 
     & li > a{
       @include font(em(16), 400);
       text-transform: uppercase;
-      color: $nice-white;
+      color: $nice-gray;
     }
   }
+}
+
+.nav_icon_default{
+  display: inline-flex;
+  width: rem(18);
+  font-size: rem(16);
+  color: $nice-gray;
+  margin-right: rem(10);
 }

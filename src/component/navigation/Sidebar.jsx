@@ -2,6 +2,9 @@
 // чтобы наше приложение распознало JSX
 import React from 'react';
 
+//import icon
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 // style's content.scss
 import styles from './Sidebar.module.scss';
 
@@ -12,19 +15,20 @@ const Sidebar = () => {
         <nav className={styles.nav_item}>
           <ul>
             <li>
-              <a href="#/">Profile</a>
+              <span className={styles.nav_icon_default}><FontAwesomeIcon icon="info" /></span>
+              <a href="#/">Basic information</a>
             </li>
             <li>
-              <a href="#/">Messages</a>
+              <span className={styles.nav_icon_default}><FontAwesomeIcon icon="user-graduate" /></span>
+              <a href="#/">Education and work</a>
             </li>
             <li>
-              <a href="#/">News</a>
-            </li>
-            <li>
-              <a href="#/">Music</a>
-            </li>
-            <li>
+              <span className={styles.nav_icon_default}><FontAwesomeIcon icon="user-cog" /></span>
               <a href="#/">Settings</a>
+            </li>
+            <li>
+              <span className={styles.nav_icon_default}><FontAwesomeIcon icon="key" /></span>
+              <a href="#/">Change password</a>
             </li>
           </ul>
         </nav>
