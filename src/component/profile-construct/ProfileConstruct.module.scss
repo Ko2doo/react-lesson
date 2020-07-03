@@ -1,0 +1,48 @@
+// import global stylesheet
+@import '../scss/smart-grid';
+@import '../scss/base-color';
+@import '../scss/helpers';
+
+.section_wrapper{
+  @include row-flex();
+
+  padding: rem(22) 0 rem(35);
+}
+
+.settings_sidebar,
+.content_page,
+.statusbar_sidebar{
+
+  @include lg-block(){
+    margin-bottom: $offset_one_side;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+  }
+}
+
+.settings_sidebar{
+  @include col();
+  @include size(3);
+  @include size-lg(12);
+  @include size-md(12);
+  display: flex;
+  margin-top: rem(100);
+}
+
+.content_page{
+  @include col();
+  @include size(7);
+  @include size-lg(12);
+  @include size-md(12);
+  display: flex;
+}
+
+.statusbar_sidebar{
+  @include col();
+  @include size(2);
+  @include size-lg(12);
+  @include size-md(12);
+  display: flex;
+}

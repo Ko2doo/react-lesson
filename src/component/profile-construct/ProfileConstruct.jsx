@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Sidebar from '../../../navigation/Sidebar';
+import Sidebar from '../navigation/Sidebar';
 
 //import icon
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 //Style's import
-import style from './css_module/ProfileConstruct.module.scss';
+import style from './ProfileConstruct.module.scss';
 
 const ProfileConstruct = () => {
   return (

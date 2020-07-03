@@ -3,12 +3,14 @@
 import React from 'react';
 
 //import components
-import Navbar from './components/Navbar';
-import PersonalInfo from './components/PersonalInfo';
-import ProfileConstruct from './components/ProfileConstruct';
+import ProfileNavbar from '../../navigation/ProfileNavbar';
+import PersonalInfo from '../../personal-info/PersonalInfo';
+import ProfileConstruct from '../../profile-construct/ProfileConstruct';
 
 //import style's
 import styles from './Profile.module.scss';
+
+
 
 
 // component
@@ -18,7 +20,7 @@ const Profile = () => {
       <main className={styles.wrapp_page}>
         <section className={styles.profileSection}>
           <div className={styles.profileCover}>
-            <Navbar />
+            <ProfileNavbar />
             <PersonalInfo />
           </div>
 

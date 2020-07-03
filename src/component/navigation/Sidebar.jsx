@@ -14,21 +14,21 @@ const Sidebar = () => {
       <aside className={styles.sidebar}>
         <nav className={styles.nav_item}>
           <ul>
-            <li>
+            <li className={styles.nav_li_item}>
               <span className={styles.nav_icon_default}><FontAwesomeIcon icon="info" /></span>
-              <a href="#/">Basic information</a>
+              <a href="#/" className={styles.nav_link}>Basic information</a>
             </li>
-            <li>
+            <li className={styles.nav_li_item}>
               <span className={styles.nav_icon_default}><FontAwesomeIcon icon="user-graduate" /></span>
-              <a href="#/">Education and work</a>
+              <a href="#/" className={styles.nav_link}>Education and work</a>
             </li>
-            <li>
+            <li className={styles.nav_li_item}>
               <span className={styles.nav_icon_default}><FontAwesomeIcon icon="user-cog" /></span>
-              <a href="#/">Settings</a>
+              <a href="#/" className={styles.nav_link}>Settings</a>
             </li>
-            <li>
+            <li className={styles.nav_li_item}>
               <span className={styles.nav_icon_default}><FontAwesomeIcon icon="key" /></span>
-              <a href="#/">Change password</a>
+              <a href="#/" className={styles.nav_link}>Change password</a>
             </li>
           </ul>
         </nav>

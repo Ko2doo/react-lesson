@@ -18,17 +18,37 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+  }
+}
 
-    & > li{
-      padding: rem(15) 0;
-      border-bottom: rem(1) solid $link-border-col;
-    }
+.nav_li_item{
+  position: relative;
+  padding: rem(15) 0;
+  border-bottom: rem(1) solid $link-border-col;
 
-    & li > a{
-      @include font(em(16), 400);
-      text-transform: uppercase;
-      color: $nice-gray;
+  &:hover{
+    &.elm-active{
+      content: '';
+      display: inline-flex;
+      position: absolute;
+      left: rem(-15);
+      top: rem(12);
+      width: rem(2);
+      height: rem(26);
+      background-color: $nice-green;
     }
+  }
+}
+
+.nav_link{
+  @include font(em(16), 400);
+  text-transform: uppercase;
+  color: $nice-gray;
+  transition: ease-out .2s;
+  transition-property: color;
+
+  &:hover{
+    color: $nice-green;
   }
 }
 
