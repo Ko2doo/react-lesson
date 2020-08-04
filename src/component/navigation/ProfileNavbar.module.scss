@@ -49,8 +49,9 @@
   color: $icon-default;
 }
 
-.menu_item{
 
+.btn_burger_menu{
+  display: none;
 }
 
 @include md-block(){

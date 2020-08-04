@@ -37,6 +37,7 @@
   @include size-lg(12);
   @include size-md(12);
   display: flex;
+  flex-wrap: wrap;
 }
 
 .statusbar_sidebar{

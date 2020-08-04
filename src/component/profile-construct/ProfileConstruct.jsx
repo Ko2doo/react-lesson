@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Sidebar from '../navigation/Sidebar';
+import Post from '../posts/Post';
 
 //import icon
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -17,7 +18,8 @@ const ProfileConstruct = () => {
         </div>
         
         <div className={style.content_page}>
-          content
+          <Post message='Привет как дела?' />
+          <Post message='Мой первый пост' />
         </div>
         
         <div className={style.statusbar_sidebar}>

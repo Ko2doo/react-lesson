@@ -1,0 +1,78 @@
+// import global stylesheet
+@import '../scss/smart-grid';
+@import '../scss/base-color';
+@import '../scss/helpers';
+
+.card{
+  @include col();
+  @include size(12);
+
+  @include lg-block(){
+    height: auto;
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-bottom: rem(15);
+  height: rem(160);
+  padding: rem(12) 0;
+  box-sizing: border-box;
+  border-radius: rem(5);
+  background-color: $nice-blue;
+  box-shadow: rem(0) rem(4) rem(6) rem(-6) $blue-shadow;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+
+.avatar{
+  @include col();
+  @include size(3);
+
+  @include sm-block(){
+    border-width: rem(3);
+  }
+
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  border: rem(5) solid #fff;
+  box-shadow: 0 rem(5) rem(5) rem(-5);
+}
+
+.blabla_place{
+  @include col();
+  @include size(9);
+
+  @include md-block(){
+    @include size(12);
+  }
+  
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &::before{
+    content: '';
+    position: absolute;
+    left: rem(-15);
+    width: rem(1);
+    height: 100%;
+    display: inline-block;
+    background-color: $ghost-borderline;
+  }
+}
+
+.text{
+  @include font(em(14), 400);
+
+  @include md-block(){
+    margin-top: rem(15);
+  }
+
+  margin: auto 0 auto;
+}
