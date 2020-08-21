@@ -18,8 +18,8 @@ const ProfileConstruct = () => {
         </div>
         
         <div className={style.content_page}>
-          <Post message='Привет как дела?' />
-          <Post message='Мой первый пост' />
+          <Post message='Привет как дела?' likedCount="3" dislikedCount="1" />
+          <Post message='Мой первый пост' likedCount="25" dislikedCount="8" />
         </div>
         
         <div className={style.statusbar_sidebar}>

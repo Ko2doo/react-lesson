@@ -1,0 +1,14 @@
+{
+  "posts": {
+    "post1": {
+      "id": 1,
+      "author": "Dmitry",
+      "post_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, laudantium. Expedita in ex impedit dolorem iusto laborum, enim modi debitis totam esse recusandae a, architecto alias provident adipisci commodi eius quae fugiat."
+    },
+    "post2": {
+      "id": 1,
+      "author": "Ivan",
+      "post_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, laudantium. Expedita in ex impedit dolorem iusto laborum, enim modi debitis totam esse recusandae a, architecto alias provident adipisci commodi eius quae fugiat.Expedita in ex impedit dolorem iusto laborum, enim modi debitis totam esse recusandae a, architecto alias provident adipisci commodi eius quae fugiat.Expedita in ex impedit dolorem iusto laborum, enim modi debitis totam esse recusandae a, architecto alias provident adipisci commodi eius quae fugiat....."
+    }
+  }
+}

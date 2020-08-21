@@ -1,7 +1,7 @@
 import React from 'react';
 
 //import icon
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 //Style's import
 import style from './Post.module.scss';
@@ -20,6 +20,25 @@ const Post = (props) => {
         <p className={style.text}>
           {props.message}
         </p>
+        
+        <div className={style.count_place}>
+          <span className={style.liked_count} >
+            <span className={style.liked_icon}>
+              <FontAwesomeIcon icon="thumbs-up" />
+            </span>
+            
+              {props.likedCount}
+          </span>
+
+          <span className={style.disliked_count}>
+            <span className={style.dislike_icon}>
+              <FontAwesomeIcon icon="thumbs-down" />
+            </span>
+
+              {props.dislikedCount}
+          </span>
+        </div>
+
       </div>
     </div>
   );
