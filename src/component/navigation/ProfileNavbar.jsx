@@ -23,21 +23,21 @@ const ProfileNavbar = () => {
               </a>
             </li>
             <li className={classNames(style.navbar_li_item)}>
-              <a href="#/" className={style.navbar_link_item}>
+              <a href="/dialogs" className={style.navbar_link_item}>
               <span className={style.icon_default}><FontAwesomeIcon icon="envelope" /></span>
                 Messages
+              </a>
+            </li>
+            <li className={classNames(style.navbar_li_item)}>
+              <a href="/posts" className={style.navbar_link_item}>
+              <span className={style.icon_default}><FontAwesomeIcon icon="newspaper" /></span>
+                Posts
               </a>
             </li>
             <li className={classNames(style.navbar_li_item)}>
               <a href="#/" className={style.navbar_link_item}>
               <span className={style.icon_default}><FontAwesomeIcon icon="headphones" /></span>
                 Music
-              </a>
-            </li>
-            <li className={classNames(style.navbar_li_item)}>
-              <a href="#/" className={style.navbar_link_item}>
-              <span className={style.icon_default}><FontAwesomeIcon icon="newspaper" /></span>
-                News
               </a>
             </li>
           </ul>

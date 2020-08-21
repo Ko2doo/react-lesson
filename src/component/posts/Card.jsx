@@ -4,11 +4,11 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 //Style's import
-import style from './Post.module.scss';
+import style from './Card.module.scss';
 
 import userAvatar from '../details/img/avatar.jpg';
 
-const Post = (props) => {
+const Card = (props) => {
 
   // console.log(props.message);
 
@@ -44,4 +44,4 @@ const Post = (props) => {
   );
 }
 
-export default Post;
+export default Card;

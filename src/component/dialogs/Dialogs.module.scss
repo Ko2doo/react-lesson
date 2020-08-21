@@ -1,0 +1,9 @@
+// import global stylesheet
+@import '../scss/smart-grid';
+@import '../scss/base-color';
+@import '../scss/helpers';
+
+
+.members_dialog{
+  display: flex;
+}
