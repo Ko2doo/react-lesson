@@ -22,21 +22,21 @@ const Card = (props) => {
         </p>
         
         <div className={style.count_place}>
-          <span className={style.liked_count} >
+          <button type="button" className={style.btn_like}>
             <span className={style.liked_icon}>
               <FontAwesomeIcon icon="thumbs-up" />
             </span>
             
               {props.likedCount}
-          </span>
+          </button>
 
-          <span className={style.disliked_count}>
+          <button type="button" className={style.btn_dislike}>
             <span className={style.dislike_icon}>
               <FontAwesomeIcon icon="thumbs-down" />
             </span>
 
               {props.dislikedCount}
-          </span>
+          </button>
         </div>
 
       </div>

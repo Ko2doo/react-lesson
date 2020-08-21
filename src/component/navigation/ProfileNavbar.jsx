@@ -34,12 +34,6 @@ const ProfileNavbar = () => {
                 Posts
               </a>
             </li>
-            <li className={classNames(style.navbar_li_item)}>
-              <a href="#/" className={style.navbar_link_item}>
-              <span className={style.icon_default}><FontAwesomeIcon icon="headphones" /></span>
-                Music
-              </a>
-            </li>
           </ul>
         </div>
       </nav>
