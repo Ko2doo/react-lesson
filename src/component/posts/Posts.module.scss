@@ -1,0 +1,37 @@
+// import global stylesheet
+@import '../scss/smart-grid';
+@import '../scss/base-color';
+@import '../scss/helpers';
+
+
+.write_post{
+  @include col();
+  @include size(12);
+
+  margin-top: $offset_one_side;
+}
+
+.textarea{
+  width: 100%;
+  height: rem(160);
+  padding: rem(4) rem(8);
+  resize: none;
+  box-sizing: border-box;
+}
+
+.add_post{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  width: rem(30);
+  height: rem(30);
+  padding: 0;
+  border: none;
+  background-color: $add-to;
+}
+
+.icon{
+  display: inline-flex;
+  color: $nice-white;
+}

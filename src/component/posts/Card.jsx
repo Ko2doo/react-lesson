@@ -22,7 +22,11 @@ const Card = (props) => {
         </p>
         
         <div className={style.count_place}>
-          <button type="button" className={style.btn_like}>
+          <button
+            type="button"
+            title="Нравится"
+            className={style.btn_like}>
+
             <span className={style.liked_icon}>
               <FontAwesomeIcon icon="thumbs-up" />
             </span>
@@ -30,7 +34,11 @@ const Card = (props) => {
               {props.likedCount}
           </button>
 
-          <button type="button" className={style.btn_dislike}>
+          <button 
+            type="button"
+            title="Не нравится"
+            className={style.btn_dislike}>
+
             <span className={style.dislike_icon}>
               <FontAwesomeIcon icon="thumbs-down" />
             </span>

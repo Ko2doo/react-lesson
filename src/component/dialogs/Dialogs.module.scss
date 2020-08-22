@@ -10,6 +10,19 @@
   @include size(12);
 }
 
+.list__item{
+  margin-bottom: $offset_one_side;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+
+.dialog__item{
+  display: flex;
+  width: 100%;
+}
+
 .dialogs{
 
 
@@ -54,9 +67,4 @@
     display: flex;
     flex-direction: column;
   }
-}
-
-.dialog__item{
-  display: flex;
-  width: 100%;
 }
