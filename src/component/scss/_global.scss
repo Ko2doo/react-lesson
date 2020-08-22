@@ -18,3 +18,7 @@
     @include row-flex();
   }
 }
+
+.wrapp-page{
+  @include row-flex();
+}

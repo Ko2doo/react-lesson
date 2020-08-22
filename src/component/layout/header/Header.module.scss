@@ -3,25 +3,27 @@
 @import '../../scss/base-color';
 @import '../../scss/helpers';
 
+
 .header{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: rem(8) 0 rem(8);
-  background-color: $nice-black;
-
+  max-width: 100%;
+  width: 100%;
 }
 
-.logo{
-  display: inline-flex;
-  font-size: em(30);
-  margin-left: rem(12);
-  color: $nice-white;
+.wrapper{
+  @include container();
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.info_item{
+.headerCover{
   display: flex;
-  margin-right: rem(12);
-  @include font(em(18), 400);
-  color: $nice-white;
+  max-width: 100%;
+  width: 100%;
+  height: rem(350);
+  position: relative;
+  background-color: $nice-white;
+  background-image: url("../../details/img/nice.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }

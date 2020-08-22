@@ -1,24 +1,21 @@
-// импортируем библиотеку реакт чтобы,
-// чтобы наше приложение распознало JSX
 import React from 'react';
 
-//import icon
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+//import components
 
 //import style's
 import styles from './Header.module.scss';
+import PersonalInfo from '../../personal-info/PersonalInfo';
 
-// компонента (компонент)
+// component
 const Header = () => {
   return (
     <React.Fragment>
       <header className={styles.header}>
-        <span className={styles.logo}>
-          <FontAwesomeIcon icon="poo" />
-        </span>
-        <p className={styles.info_item}>
-          Shiiit blog
-        </p>
+        <div className={styles.headerCover}>
+          <div className={styles.wrapper}>
+            <PersonalInfo />
+          </div>
+        </div>
       </header>
     </React.Fragment>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 // импортируем наши компоненты
 import Header from './component/layout/header/Header.jsx';
-import Profile from './component/layout/profile/Profile.jsx';
+import PageConstruct from './component/page-construct/PageConstruct.jsx';
 import Footer from './component/layout/footer/Footer.jsx';
 
 const App = () => {
@@ -9,9 +9,11 @@ const App = () => {
     <div className="App">
       <Header />
       <div className="App-wrapper">
-        <Profile />
-        <Footer />
+        <main className="wrapp-page">
+          <PageConstruct />
+        </main>
       </div>
+      <Footer />
     </div>
   );
 }

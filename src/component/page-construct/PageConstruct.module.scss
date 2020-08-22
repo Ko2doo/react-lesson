@@ -5,22 +5,12 @@
 
 .section_wrapper{
   @include row-flex();
+  @include col();
+  @include size(12);
 
   padding: rem(22) 0 rem(35);
 }
 
-.settings_sidebar,
-.content_page,
-.statusbar_sidebar{
-
-  @include lg-block(){
-    margin-bottom: $offset_one_side;
-
-      &:last-child{
-        margin-bottom: 0;
-      }
-  }
-}
 
 .settings_sidebar{
   @include col();
@@ -46,4 +36,17 @@
   @include size-lg(12);
   @include size-md(12);
   display: flex;
+}
+
+.settings_sidebar,
+.content_page,
+.statusbar_sidebar{
+
+  @include lg-block(){
+    margin-bottom: $offset_one_side;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+  }
 }
