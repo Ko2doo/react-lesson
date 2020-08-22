@@ -1,0 +1,68 @@
+// import global stylesheet
+@import '../scss/smart-grid';
+@import '../scss/base-color';
+@import '../scss/helpers';
+
+.dialog__item{
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  padding: rem(4) rem(6);
+  margin-bottom: $offset_one_side;
+  cursor: pointer;
+  border-radius: rem(4);
+  background-color: $member-clr;
+  box-shadow: $member-card-shadow;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+
+}
+
+.card{
+
+  &__head{
+    display: inline-flex;
+    width: rem(45);
+    height: rem(45);
+
+    .avatar{
+      display: inline-flex;
+      width: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      background-color: $nice-gray;
+    }
+  }
+  
+  &__body{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 0 rem(4) 0 rem(8);
+
+    .member_name{
+      margin-top: rem(8);
+      @include font(em(16), 600);
+      color: #27aae3;
+    }
+
+    .member_status{
+      display: inline-flex;
+      margin-top: rem(2);
+      @include font(em(10), 400);
+    }
+  }
+  
+  &__footer{
+    position: absolute;
+    right: rem(6);
+    bottom: rem(4);
+
+    .date{
+      @include font(em(9), 400);
+      color: $last-time-message;
+    }
+  }
+}
