@@ -1,10 +1,11 @@
 import React from 'react';
-
-//import components
-
 //import style's
 import styles from './Header.module.scss';
+
+//import components
 import PersonalInfo from '../../personal-info/PersonalInfo';
+
+
 
 // component
 const Header = () => {
