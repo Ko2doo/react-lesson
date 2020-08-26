@@ -17,6 +17,23 @@
 	}
 }
 
+@mixin line-clamp($clamp, $height, $line-height){
+	//default: height: 3.4em; (54px)
+	overflow: hidden;
+  line-height: $line-height;
+  height: $height;
+  text-overflow: -o-ellipsis-lastline;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;  
+	-webkit-line-clamp: $clamp;
+	
+	@supports (text-overflow: -o-ellipsis-lastline) {
+		&{
+			display: block;
+		}
+	}
+}
+
 .container {
   @include container();
   @include sm(max-width, rem(510));
