@@ -22,20 +22,18 @@ const Posts = (props) => {
     }
   ];
 
+  let postElements = messagesData
+    .map( (message) =>
+      <Card
+        id={message.id}
+        message={message.message}
+      />
+    );
+
   return (
     <React.Fragment>
-      <Card
-        id={messagesData[0].id}
-        message={messagesData[0].message}
-      />
-      <Card
-        id={messagesData[1].id}
-        message={messagesData[1].message}
-      />
-      <Card
-        id={messagesData[2].id}
-        message={messagesData[2].message}
-      />
+
+      {postElements}
 
       <div className={style.write_post}>
         <textarea className={style.textarea}>

@@ -7,6 +7,7 @@ import style from './Buttons.module.scss';
 class LikeButton extends Component {
   state = {
       count: 0
+      // likes: localStorage.getItem('likes') | 0
     }
 
   increment = () => {
@@ -14,6 +15,11 @@ class LikeButton extends Component {
         this.setState({
           count: newCount
         })
+        
+        // запись в localStorage()
+        // this.setState(({likes}) => ({
+        //   likes: likes + 1,
+        // }), () => localStorage.setItem('likes', this.state.likes) );
       }
 
   render() {

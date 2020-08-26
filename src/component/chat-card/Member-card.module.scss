@@ -68,6 +68,11 @@
 }
 
 .nav_link{
+  margin-bottom: $offset_one_side;
   text-decoration: none;
   color: inherit;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
 }

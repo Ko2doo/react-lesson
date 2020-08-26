@@ -16,17 +16,18 @@ import avatar2 from '../details/img/avatar2.png';
 
 const Dialogs = (props) => {
 
-  let dialogsData = [
+  // данные onn
+  let membersData = [
     {
       id: 1,
-      avatarURL: {avatar},
+      avatarURL: avatar,
       memberName: "Joe",
       lastTimeMessage: "18:04",
       memberStatus: "online"
     },
     {
       id: 2,
-      avatarURL: {avatar2},
+      avatarURL: avatar2,
       memberName: "John Cena",
       lastTimeMessage: "14:48",
       memberStatus: "offline"
@@ -36,72 +37,62 @@ const Dialogs = (props) => {
   let messagesData = [
     {
       id: 1,
-      avatarURL: {avatar},
+      avatarURL: avatar,
       authorName: "Me",
       message: "Hi John!"
     },
     {
       id: 2,
-      avatarURL: {avatar2},
+      avatarURL: avatar2,
       authorName: "John Cena",
       message: "Hi my dear friend! How are you?"
     },    
     {
       id: 3,
-      avatarURL: {avatar},
+      avatarURL: avatar,
       authorName: "Me",
       message: "Nice, John"
     }
   ];
+  // данные off
+
+  // преобразование данных, и рендеринг на странице наших компонентов, с данными
+  // рисуем с помощью map() наши карточки пользователей в левом столбце,
+  // данные берем из массива membersData
+  let dialogsElement = membersData
+    .map( (memberCard) => 
+        <MemberCard
+          id={memberCard.id}
+          key={memberCard.id}
+          avatarURL={memberCard.avatarURL}
+          memberName={memberCard.memberName}
+          lastTimeMessage={memberCard.lastTimeMessage}
+          memberStatus={memberCard.memberStatus}
+        />
+    );
+
+
+  let messagesElements = messagesData
+    .map( (message) =>
+      <MessageCard
+        id={message.id}
+        key={message.id}
+        avatarURL={message.avatarURL}
+        authorName={message.authorName}
+        message={message.message}
+      />
+    );
+
 
   return (
       <React.Fragment>
         <section className={style.members_dialog}>
           <ul className={style.dialogs__list}>
-            <li className={style.list__item}>
-              <MemberCard
-                id={dialogsData[0].id}
-                avatarURL={dialogsData[0].avatarURL}
-                memberName={dialogsData[0].memberName}
-                lastTimeMessage={dialogsData[0].lastTimeMessage}
-                memberStatus={dialogsData[0].memberStatus}
-              />
-            </li>
-
-            <li className={style.list__item}>
-              <MemberCard
-                id={dialogsData[1].id}
-                avatarURL={dialogsData[1].avatarURL}
-                memberName={dialogsData[1].memberName}
-                lastTimeMessage={dialogsData[1].lastTimeMessage}
-                memberStatus={dialogsData[1].memberStatus}
-              />
-            </li>
+            {dialogsElement}
           </ul>
 
           <div className={style.dialogs__messages}>
-
-            <MessageCard
-              id={messagesData[0].id}
-              avatarURL={messagesData[0].avatarURL}
-              authorName={messagesData[0].authorName}
-              message={messagesData[0].message}
-            />
-
-            <MessageCard
-              id={messagesData[1].id}
-              avatarURL={messagesData[1].avatarURL}
-              authorName={messagesData[1].authorName}
-              message={messagesData[1].message}
-            />
-
-            <MessageCard
-              id={messagesData[2].id}
-              avatarURL={messagesData[2].avatarURL}
-              authorName={messagesData[2].authorName}
-              message={messagesData[2].message}
-            />
-
+            {messagesElements}
           </div>
         </section>
       </React.Fragment>
