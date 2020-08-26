@@ -1,7 +1,6 @@
 import React from 'react';
-
-//import icon
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import LikeButton from '../buttons/Like-btn';
+import DislikeButton from '../buttons/Dislike-btn';
 
 //Style's import
 import style from './Card.module.scss';
@@ -22,29 +21,8 @@ const Card = (props) => {
         </p>
         
         <div className={style.count_place}>
-          <button
-            type="button"
-            title="Нравится"
-            className={style.btn_like}>
-
-            <span className={style.liked_icon}>
-              <FontAwesomeIcon icon="thumbs-up" />
-            </span>
-            
-              {props.likedCount}
-          </button>
-
-          <button 
-            type="button"
-            title="Не нравится"
-            className={style.btn_dislike}>
-
-            <span className={style.dislike_icon}>
-              <FontAwesomeIcon icon="thumbs-down" />
-            </span>
-
-              {props.dislikedCount}
-          </button>
+          <LikeButton />
+          <DislikeButton />
         </div>
 
       </div>

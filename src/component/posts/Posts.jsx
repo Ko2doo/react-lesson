@@ -10,21 +10,15 @@ const Posts = (props) => {
   let messagesData = [
     {
       id: 1,
-      message: "Привет как дела?",
-      likedCount: 25,
-      dislikedCount: 3
+      message: "Привет как дела?"
     },
     {
       id: 2,
-      message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?",
-      likedCount: 35,
-      dislikedCount: 2
+      message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?"
     },
     {
       id: 3,
-      message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?",
-      likedCount: 3,
-      dislikedCount: 300
+      message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?"
     }
   ];
 
@@ -33,20 +27,14 @@ const Posts = (props) => {
       <Card
         id={messagesData[0].id}
         message={messagesData[0].message}
-        likedCount={messagesData[0].likedCount}
-        dislikedCount={messagesData[0].dislikedCount}
       />
       <Card
         id={messagesData[1].id}
         message={messagesData[1].message}
-        likedCount={messagesData[1].likedCount}
-        dislikedCount={messagesData[1].dislikedCount}
       />
       <Card
         id={messagesData[2].id}
         message={messagesData[2].message}
-        likedCount={messagesData[2].likedCount}
-        dislikedCount={messagesData[2].dislikedCount}
       />
 
       <div className={style.write_post}>
