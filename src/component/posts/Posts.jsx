@@ -11,20 +11,20 @@ const Posts = (props) => {
     {
       id: 1,
       message: "Привет как дела?",
-      likedCount: "25",
-      dislikedCount: "3"
+      likedCount: 25,
+      dislikedCount: 3
     },
     {
       id: 2,
       message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?",
-      likedCount: "35",
-      dislikedCount: "2"
+      likedCount: 35,
+      dislikedCount: 2
     },
     {
       id: 3,
       message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?",
-      likedCount: "3",
-      dislikedCount: "300"
+      likedCount: 3,
+      dislikedCount: 300
     }
   ];
 
