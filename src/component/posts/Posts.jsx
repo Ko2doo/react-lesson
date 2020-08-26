@@ -26,6 +26,7 @@ const Posts = (props) => {
     .map( (message) =>
       <Card
         id={message.id}
+        key={message.id}
         message={message.message}
       />
     );
