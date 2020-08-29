@@ -4,7 +4,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import 'normalize.css';
-import './component/stylesheets.scss';
+import './assets/stylesheets.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 

@@ -9,8 +9,8 @@ import MessageCard from '../message-card/Message-card';
 //style's import
 import style from './Dialogs.module.scss';
 
-import avatar from '../details/img/avatar.jpg';
-import avatar2 from '../details/img/avatar2.png';
+import avatar from '../../assets/details/img/avatar.jpg';
+import avatar2 from '../../assets/details/img/avatar2.png';
 
 
 

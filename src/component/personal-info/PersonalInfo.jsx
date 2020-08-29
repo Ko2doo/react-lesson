@@ -6,7 +6,7 @@ import React from 'react';
 //Style's import
 import style from './PersonalInfo.module.scss';
 
-import userAvatar from '../details/img/avatar.jpg';
+import userAvatar from '../../assets/details/img/avatar.jpg';
 
 const PersonalInfo = () => {
   return (
