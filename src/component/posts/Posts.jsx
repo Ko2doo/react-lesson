@@ -7,28 +7,19 @@ import style from './Posts.module.scss';
 
 const Posts = (props) => {
 
-  let messagesData = [
-    {
-      id: 1,
-      message: "Привет как дела?"
-    },
-    {
-      id: 2,
-      message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?"
-    },
-    {
-      id: 3,
-      message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?"
-    }
-  ];
-
-  let postElements = messagesData
-    .map( (message) =>
-      <Card
-        id={message.id}
-        key={message.id}
-        message={message.message}
-      />
+  // немного улучшаем наш маппинг,
+  // чтобы обращаться через props дописываем props.posts к функции map() чтобы 
+  // потом вызвать с помощью пропсов и
+  // отрисовать на странице то что у нас находится в компоненте <Card /> т.е. 
+  // наши посты:
+  // <Posts posts={posts} />
+  let postElements =
+      props.posts.map( (message) =>
+        <Card
+          id={message.id}
+          key={message.id}
+          message={message.message}
+        />
     );
 
   return (

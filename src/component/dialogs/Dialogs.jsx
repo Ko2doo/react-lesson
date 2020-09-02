@@ -12,7 +12,7 @@ import avatar2 from '../../assets/details/img/avatar2.png';
 
 const Dialogs = (props) => {
 
-  // данные onn
+  // // данные onn
   let membersData = [
     {
       id: 1,
@@ -50,13 +50,13 @@ const Dialogs = (props) => {
       message: "Nice, John"
     }
   ];
-  // данные off
+  // // данные off
 
   // преобразование данных, и рендеринг на странице наших компонентов, с данными
   // рисуем с помощью map() наши карточки пользователей в левом столбце,
   // данные берем из массива membersData
   let dialogsElement = membersData
-    .map( (memberCard) => 
+      .map( (memberCard) => 
         <MemberCard
           id={memberCard.id}
           key={memberCard.id}
@@ -69,14 +69,14 @@ const Dialogs = (props) => {
 
 
   let messagesElements = messagesData
-    .map( (message) =>
-      <MessageCard
-        id={message.id}
-        key={message.id}
-        avatarURL={message.avatarURL}
-        authorName={message.authorName}
-        message={message.message}
-      />
+      .map( (message) =>
+        <MessageCard
+          id={message.id}
+          key={message.id}
+          avatarURL={message.avatarURL}
+          authorName={message.authorName}
+          message={message.message}
+        />
     );
 
 
