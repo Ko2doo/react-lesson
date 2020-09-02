@@ -14,21 +14,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import style from './component/page-construct/PageConstruct.module.scss';
 import styles from './component/page-construct/Sidebar.module.scss';
 
-let posts = [
-  {
-    id: 1,
-    message: "Привет как дела?"
-  },
-  {
-    id: 2,
-    message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?"
-  },
-  {
-    id: 3,
-    message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?"
-  }
-];
-
 
 const App = (props) => {
 
@@ -97,7 +82,9 @@ const App = (props) => {
                 <div className={style.content_page}>
                   
                   <Route path="/dialogs" render={ () => <Dialogs /> } />
-                  <Route path="/posts" render={ () => <Posts posts={posts} /> } />
+                  <Route path="/posts" render={ () => 
+                    <Posts posts={props.posts} /> }
+                  />
 
                 </div>
                 
