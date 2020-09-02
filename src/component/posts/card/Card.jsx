@@ -1,11 +1,11 @@
 import React from 'react';
-import LikeButton from '../buttons/Like-btn';
-import DislikeButton from '../buttons/Dislike-btn';
+import LikeButton from '../../buttons/Like-btn';
+import DislikeButton from '../../buttons/Dislike-btn';
 
 //Style's import
 import style from './Card.module.scss';
 
-import userAvatar from '../../assets/details/img/avatar.jpg';
+import userAvatar from '../../../assets/details/img/avatar.jpg';
 
 const Card = (props) => {
 

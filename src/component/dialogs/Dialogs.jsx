@@ -1,10 +1,6 @@
 import React from 'react';
-import MemberCard from '../chat-card/Member-card';
-import MessageCard from '../message-card/Message-card';
-// import { BrowserRouter, NavLink } from 'react-router-dom';
-
-//import icon
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import MemberCard from './member-card/Member-card';
+import MessageCard from './message-card/Message-card';
 
 //style's import
 import style from './Dialogs.module.scss';
