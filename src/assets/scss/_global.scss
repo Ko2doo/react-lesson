@@ -22,3 +22,7 @@
 .wrapp-page{
   @include row-flex();
 }
+
+button {
+  padding: 0;
+}

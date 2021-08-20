@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter, Route, NavLink} from 'react-router-dom';
 // импортируем наши компоненты
 import Header from './component/layout/header/Header.jsx';
+
 import Footer from './component/layout/footer/Footer.jsx';
 import Dialogs from './component/dialogs/Dialogs.jsx';
 import Posts from './component/posts/Posts.jsx';
@@ -81,15 +82,24 @@ const App = (props) => {
                 
                 <div className={style.content_page}>
                   
-                  <Route path="/dialogs" render={ () => <Dialogs /> } />
-                  <Route path="/posts" render={ () => 
-                    <Posts posts={props.posts} /> }
+                  <Route
+                    path="/dialogs"
+                    render={ () =>
+                      <Dialogs
+                        state={props.state.dialogsPage}
+                        state={props.state.dialogsPage}
+                      /> }
+                  />
+                  
+                  <Route
+                    path="/posts"
+                    render={ () => <Posts state={props.state.postPage} /> }
                   />
 
                 </div>
                 
                 <div className={style.statusbar_sidebar}>
-                  right column
+                  sidebar
                 </div>
               </section>
             </main>

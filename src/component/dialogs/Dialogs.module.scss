@@ -68,3 +68,46 @@
     flex-direction: column;
   }
 }
+
+.dialog__wrapp {
+  max-height: rem(280);
+  height: 100%;
+  overflow: auto;
+}
+
+.read_message {
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.textarea {
+  width: 85%;
+  min-height: rem(60);
+  height: auto;
+  padding: rem(8) rem(14);
+  resize: none;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  border: 1px solid $send-msg-bcgck;
+  
+  &:hover,
+  &:focus {
+    outline: 2px solid $send-msg-bcgck;
+  }
+}
+
+.add_message {
+  width: 15%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  background-color: $send-msg-bcgck;
+  outline: none;
+  border: none;
+
+  .icon {
+    font-size: em(20);
+    color: $btn-send-msg;
+  }
+}

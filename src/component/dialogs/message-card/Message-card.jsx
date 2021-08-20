@@ -9,7 +9,7 @@ import style from './Message-card.module.scss';
 
 const MessageCard = (props) => {
   return (
-    <div className={style.message_item}>
+    <article className={style.message_item}>
       <div className={style.member__block}>
         <img
           src={props.avatarURL}
@@ -28,7 +28,7 @@ const MessageCard = (props) => {
         </p>
       </div>
 
-    </div>
+    </article>
   );
 }
 

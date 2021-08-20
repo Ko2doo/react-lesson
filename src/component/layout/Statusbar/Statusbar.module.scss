@@ -1,0 +1,24 @@
+// import global stylesheet
+@import '../../../assets/scss/smart-grid';
+@import '../../../assets/scss/base-color';
+@import '../../../assets/scss/helpers';
+
+.sidebar_list {
+  width: 100%;
+
+}
+
+.lists {
+  @include row-flex();
+
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.sidebar_item {
+  @include col();
+  @include size(12);
+
+
+}

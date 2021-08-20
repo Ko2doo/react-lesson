@@ -5,30 +5,20 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import 'normalize.css';
 import './assets/stylesheets.scss';
+
+import state from './redux/state';
+
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 
 library.add(fab, fas);
 
-let posts = [
-  {
-    id: 1,
-    message: "Привет как дела?"
-  },
-  {
-    id: 2,
-    message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?"
-  },
-  {
-    id: 3,
-    message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?"
-  }
-];
 
 ReactDOM.render(
   <React.StrictMode>
-    <App posts={posts} />
+    {/* передаем наши данные в компонент app */}
+    <App state={state} />
   </React.StrictMode>,
   document.getElementById('root')
 );

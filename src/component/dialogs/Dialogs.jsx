@@ -1,62 +1,19 @@
 import React from 'react';
 import MemberCard from './member-card/Member-card';
 import MessageCard from './message-card/Message-card';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 //style's import
 import style from './Dialogs.module.scss';
 
-import avatar from '../../assets/details/img/avatar.jpg';
-import avatar2 from '../../assets/details/img/avatar2.png';
-
-
 
 const Dialogs = (props) => {
-
-  // // данные onn
-  let membersData = [
-    {
-      id: 1,
-      avatarURL: avatar,
-      memberName: "Joe",
-      lastTimeMessage: "18:04",
-      memberStatus: "online"
-    },
-    {
-      id: 2,
-      avatarURL: avatar2,
-      memberName: "John Cena",
-      lastTimeMessage: "14:48",
-      memberStatus: "offline"
-    }
-  ];
-
-  let messagesData = [
-    {
-      id: 1,
-      avatarURL: avatar,
-      authorName: "Me",
-      message: "Hi John!"
-    },
-    {
-      id: 2,
-      avatarURL: avatar2,
-      authorName: "John Cena",
-      message: "Hi my dear friend! How are you?"
-    },    
-    {
-      id: 3,
-      avatarURL: avatar,
-      authorName: "Me",
-      message: "Nice, John"
-    }
-  ];
-  // // данные off
 
   // преобразование данных, и рендеринг на странице наших компонентов, с данными
   // рисуем с помощью map() наши карточки пользователей в левом столбце,
   // данные берем из массива membersData
-  let dialogsElement = membersData
-      .map( (memberCard) => 
+ let dialogsElement =
+      props.state.membersCard.map( (memberCard) => 
         <MemberCard
           id={memberCard.id}
           key={memberCard.id}
@@ -68,8 +25,8 @@ const Dialogs = (props) => {
     );
 
 
-  let messagesElements = messagesData
-      .map( (message) =>
+  let messagesElements =
+      props.state.messages.map( (message) =>
         <MessageCard
           id={message.id}
           key={message.id}
@@ -80,6 +37,14 @@ const Dialogs = (props) => {
     );
 
 
+  let newMsgElement = React.createRef();
+
+  let sendMsg = () => {
+    let txt = newMsgElement.current.value;
+    alert(txt);
+  }
+
+
   return (
       <React.Fragment>
         <section className={style.members_dialog}>
@@ -88,7 +53,21 @@ const Dialogs = (props) => {
           </ul>
 
           <div className={style.dialogs__messages}>
-            {messagesElements}
+            <div className={style.dialog__wrapp}> 
+              {messagesElements}
+            </div>
+
+            <div className={style.read_message}>
+              <textarea ref={ newMsgElement } className={style.textarea}></textarea>
+
+              <button onClick={ sendMsg } className={style.add_message} title="Отправить сообщение">
+                <span className={style.icon}>
+                  <FontAwesomeIcon icon="paper-plane" />
+                </span>
+              </button>
+
+            </div>
+
           </div>
         </section>
       </React.Fragment>

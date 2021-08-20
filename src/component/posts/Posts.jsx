@@ -14,7 +14,7 @@ const Posts = (props) => {
   // наши посты:
   // <Posts posts={posts} />
   let postElements =
-      props.posts.map( (message) =>
+      props.state.posts.map( (message) =>
         <Card
           id={message.id}
           key={message.id}
@@ -22,17 +22,24 @@ const Posts = (props) => {
         />
     );
 
+  let newPostElement = React.createRef();
+
+  let addPost = () => {
+    let text = newPostElement.current.value;
+    alert(text);
+  }
+
   return (
     <React.Fragment>
 
       {postElements}
 
       <div className={style.write_post}>
-        <textarea className={style.textarea}>
+        <textarea ref={newPostElement} className={style.textarea}>
 
         </textarea>
 
-        <button className={style.add_post} title="Добавить пост">
+        <button onClick={ addPost } className={style.add_post} title="Добавить пост">
           <span className={style.icon}>
             <FontAwesomeIcon icon="plus" />
           </span>
