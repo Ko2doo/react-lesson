@@ -14,6 +14,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //Style's import
 import style from './component/page-construct/PageConstruct.module.scss';
 import styles from './component/page-construct/Sidebar.module.scss';
+import { addPost } from './redux/state.js';
 
 
 const App = (props) => {
@@ -93,7 +94,10 @@ const App = (props) => {
                   
                   <Route
                     path="/posts"
-                    render={ () => <Posts state={props.state.postPage} /> }
+                    render={ () => <Posts 
+                                      state={props.state.postPage}
+                                      addPost={props.addPost}
+                                    /> }
                   />
 
                 </div>

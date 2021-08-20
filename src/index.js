@@ -7,6 +7,7 @@ import 'normalize.css';
 import './assets/stylesheets.scss';
 
 import state from './redux/state';
+import { addPost } from './redux/state';
 
 import App from './App';
 import * as serviceWorker from './serviceWorker';
@@ -18,7 +19,7 @@ library.add(fab, fas);
 ReactDOM.render(
   <React.StrictMode>
     {/* передаем наши данные в компонент app */}
-    <App state={state} />
+    <App state={state} addPost={addPost} />
   </React.StrictMode>,
   document.getElementById('root')
 );

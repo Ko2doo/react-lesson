@@ -119,4 +119,15 @@ let state = {
 
 }
 
+
+export let addPost = (postMessage) => {
+  debugger;
+    let newPost = {
+      id: 5,
+      message: postMessage,
+    };
+
+    state.postPage.posts.push(newPost);
+}
+
 export default state;
