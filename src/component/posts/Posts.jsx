@@ -22,13 +22,23 @@ const Posts = (props) => {
         />
     );
 
+
   let newPostElement = React.createRef();
 
   let addPost = () => {
-    debugger;
-    let text = newPostElement.current.value;
-    props.addPost(text);
+
+    props.addPost();
+
   }
+
+  let onPostChange = () => {
+    let text = newPostElement.current.value;
+
+    props.updateNewPostText(text);
+  }
+
+  console.log(props.newPostText);
+
 
   return (
     <React.Fragment>
@@ -36,9 +46,12 @@ const Posts = (props) => {
       {postElements}
 
       <div className={style.write_post}>
-        <textarea ref={newPostElement} className={style.textarea}>
-
-        </textarea>
+        <textarea 
+          onChange={onPostChange}
+          value={props.state.newPostText}
+          ref={newPostElement}
+          className={style.textarea}
+        />
 
         <button onClick={ addPost } className={style.add_post} title="Добавить пост">
           <span className={style.icon}>

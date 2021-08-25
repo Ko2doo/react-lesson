@@ -14,7 +14,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //Style's import
 import style from './component/page-construct/PageConstruct.module.scss';
 import styles from './component/page-construct/Sidebar.module.scss';
-import { addPost } from './redux/state.js';
 
 
 const App = (props) => {
@@ -88,18 +87,20 @@ const App = (props) => {
                     render={ () =>
                       <Dialogs
                         state={props.state.dialogsPage}
-                        state={props.state.dialogsPage}
+                        // state={props.state.dialogsPage}
                       /> }
                   />
                   
                   <Route
                     path="/posts"
-                    render={ () => <Posts 
-                                      state={props.state.postPage}
-                                      addPost={props.addPost}
-                                    /> }
+                    render={ 
+                      () => <Posts 
+                              state={props.state.postPage}
+                              newPostText={props.state.postPage.newPostText}
+                              addPost={props.addPost}
+                              updateNewPostText={props.updateNewPostText}
+                            /> }
                   />
-
                 </div>
                 
                 <div className={style.statusbar_sidebar}>

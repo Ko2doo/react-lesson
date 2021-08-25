@@ -1,28 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import 'normalize.css';
-import './assets/stylesheets.scss';
+/*
+* File name = Index.js
+* path = /src/index.js
+* 
+* Входной файл, вызываем в нём функцию renderEntireTree() и передаем ей необходимые параметры.
+* В данный файл приходят изменения из state.js, и передаются дальше по компонентам
+*/
 
-import state from './redux/state';
-import { addPost } from './redux/state';
 
-import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+// Render.js
+import {rerenderEntireTree} from './render';
 
-library.add(fab, fas);
+// State.js
+import state from './redux/state';
+
+rerenderEntireTree(state);
 
 
-ReactDOM.render(
-  <React.StrictMode>
-    {/* передаем наши данные в компонент app */}
-    <App state={state} addPost={addPost} />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

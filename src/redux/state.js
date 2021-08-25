@@ -1,5 +1,7 @@
 /*
-* State.js
+* File name = State.js
+* Path = /src/redux/state.js
+*
 * Collection of arrays of data
 * Хранение данных осуществляется в переменной state, в виде массива
 * 
@@ -15,14 +17,15 @@
 *    }
 *
 *}
-
-
+*
+*
 */
 
 // временно храним тут пути к аватарам:
 // импортируем до App
 import avatar from '../assets/details/img/avatar.jpg';
 import avatar2 from '../assets/details/img/avatar2.png';
+import { rerenderEntireTree } from '../render';
 
 
 
@@ -87,8 +90,10 @@ let state = {
       {
         id: 4,
         message: "Lorem ipsum dolor si"
-      },
-    ]
+      }
+    ],
+
+    newPostText: "Some text.."
 
   },
 
@@ -119,15 +124,29 @@ let state = {
 
 }
 
+window.state = state;
 
-export let addPost = (postMessage) => {
-  debugger;
+// addPost Funtion
+export let addPost = () => {
+  // debugger;
     let newPost = {
       id: 5,
-      message: postMessage,
+      message: state.postPage.newPostText,
     };
 
     state.postPage.posts.push(newPost);
+    state.postPage.newPostText = '';
+      rerenderEntireTree(state);
 }
+
+export let updateNewPostText = (newText) => {
+  // debugger;
+
+    state.postPage.newPostText = newText;
+      rerenderEntireTree(state);
+}
+
+
+
 
 export default state;
