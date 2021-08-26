@@ -23,11 +23,14 @@
 
 // временно храним тут пути к аватарам:
 // импортируем до App
+import { useReducer } from 'react';
 import avatar from '../assets/details/img/avatar.jpg';
 import avatar2 from '../assets/details/img/avatar2.png';
-import { rerenderEntireTree } from '../render';
 
 
+let rerenderEntireTree = () => {
+  console.log('State changed');
+}
 
 let state = {
 
@@ -127,7 +130,7 @@ let state = {
 window.state = state;
 
 // addPost Funtion
-export let addPost = () => {
+export const addPost = () => {
   // debugger;
     let newPost = {
       id: 5,
@@ -139,12 +142,21 @@ export let addPost = () => {
       rerenderEntireTree(state);
 }
 
-export let updateNewPostText = (newText) => {
+// Обновляем состояние
+export const updateNewPostText = (newText) => {
   // debugger;
 
     state.postPage.newPostText = newText;
       rerenderEntireTree(state);
 }
+
+
+// Следим за состоянием
+export const subscribe = (observer) => {
+  rerenderEntireTree = observer; // паттерн наблюдатель
+}
+
+
 
 
 

@@ -11,6 +11,7 @@ const Card = (props) => {
 
   // console.log(props.message);
 
+
   return (
     <div className={style.card}>
       <img className={style.avatar} src={userAvatar} alt={"avatar"}/>
