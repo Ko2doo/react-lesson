@@ -27,32 +27,40 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 // State.js
-import state from './redux/state';
+import store from './redux/state';
 
-// State import functions
-import { addPost, updateNewPostText, subscribe } from './redux/state';
 
 // Font Awesome icons library
 library.add(fab, fas);
 
 
-let rerenderEntireTree = (state) => {
+let _callSubscriber = (state) => {
 
   ReactDOM.render(
     <React.StrictMode>
       {/* передаем наши данные в компонент app */}
-      <App state={state} addPost={addPost} updateNewPostText={updateNewPostText} />
+      <App 
+        state={state}
+        addPost={store.addPost.bind(store)}
+        updateNewPostText={store.updateNewPostText.bind(store)} 
+      />
     </React.StrictMode>,
     document.getElementById('root')
   );
 
 }
 
+/*
+* В примере выше мы забиндили метод addPost и updateNewPostText,
+* Чтобы сработал this и методы были всегда store
+* изучить bind()
+*/
 
-rerenderEntireTree(state);
+// Вызываем getState() от имени store поэтому тут не нужен bind() 
+_callSubscriber(store.getState());
 
-// Функция коллбэк в которую передаем функцию rerenderEntireTree, и рендерим компоненты
-subscribe(rerenderEntireTree);
+// Subscribe - теперь является методом store
+store.subscribe(_callSubscriber);
 
 
 // If you want your app to work offline and load faster, you can change

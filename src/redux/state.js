@@ -28,83 +28,13 @@ import avatar from '../assets/details/img/avatar.jpg';
 import avatar2 from '../assets/details/img/avatar2.png';
 
 
-let rerenderEntireTree = () => {
-  console.log('State changed');
-}
+// Хранилище объектов
+let store = {
+  _state: {
 
-let state = {
-
-  dialogsPage: {
-
-    membersCard: [
-      {
-        id: 1,
-        avatarURL: avatar,
-        memberName: "Joe",
-        lastTimeMessage: "18:04",
-        memberStatus: "online"
-      },
-      {
-        id: 2,
-        avatarURL: avatar2,
-        memberName: "John Cena",
-        lastTimeMessage: "14:48",
-        memberStatus: "offline"
-      }
-    ],
-
-    messages: [
-      {
-        id: 1,
-        avatarURL: avatar,
-        authorName: "Me",
-        message: "Hi John!"
-      },
-      {
-        id: 2,
-        avatarURL: avatar2,
-        authorName: "John Cena",
-        message: "Hi my dear friend! How are you?"
-      },    
-      {
-        id: 3,
-        avatarURL: avatar,
-        authorName: "Me",
-        message: "Nice, John"
-      }
-    ]
-  },
-
-  postPage: {
-
-    posts: [
-      {
-        id: 1,
-        message: "Привет как дела?"
-      },
-      {
-        id: 2,
-        message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?"
-      },
-      {
-        id: 3,
-        message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?"
-      },
-      {
-        id: 4,
-        message: "Lorem ipsum dolor si"
-      }
-    ],
-
-    newPostText: "Some text.."
-
-  },
-
-  sidebar: {
- 
-    statusbar: {
-
-      friendStatusCard: [
+    dialogsPage: {
+  
+      membersCard: [
         {
           id: 1,
           avatarURL: avatar,
@@ -119,52 +49,119 @@ let state = {
           lastTimeMessage: "14:48",
           memberStatus: "offline"
         }
+      ],
+  
+      messages: [
+        {
+          id: 1,
+          avatarURL: avatar,
+          authorName: "Me",
+          message: "Hi John!"
+        },
+        {
+          id: 2,
+          avatarURL: avatar2,
+          authorName: "John Cena",
+          message: "Hi my dear friend! How are you?"
+        },    
+        {
+          id: 3,
+          avatarURL: avatar,
+          authorName: "Me",
+          message: "Nice, John"
+        }
       ]
- 
+    },
+  
+    postPage: {
+  
+      posts: [
+        {
+          id: 1,
+          message: "Привет как дела?"
+        },
+        {
+          id: 2,
+          message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?"
+        },
+        {
+          id: 3,
+          message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore necessitatibus maiores nam?"
+        },
+        {
+          id: 4,
+          message: "Lorem ipsum dolor si"
+        }
+      ],
+  
+      newPostText: "Some text.."
+  
+    },
+  
+    sidebar: {
+   
+      statusbar: {
+  
+        friendStatusCard: [
+          {
+            id: 1,
+            avatarURL: avatar,
+            memberName: "Joe",
+            lastTimeMessage: "18:04",
+            memberStatus: "online"
+          },
+          {
+            id: 2,
+            avatarURL: avatar2,
+            memberName: "John Cena",
+            lastTimeMessage: "14:48",
+            memberStatus: "offline"
+          }
+        ]
+   
+      }
     }
+  
+  
+  },
+  getState() {
+    return this._state;
+  },
+  _callSubscriber() {
+    console.log('State changed');
+  },
+  // addPost Funtion
+  addPost() {
+    // debugger;
+      let newPost = {
+        id: 5,
+        message: this._state.postPage.newPostText,
+      };
+
+      this._state.postPage.posts.push(newPost);
+      this._state.postPage.newPostText = '';
+      this._callSubscriber(this._state);
+  },
+  // Обновляем состояние
+  updateNewPostText(newText) {
+
+    // debugger;
+    this._state.postPage.newPostText = newText;
+    this._callSubscriber(this._state);
+  },
+  // Следим за состоянием
+  subscribe(observer) {
+    this._callSubscriber = observer; // паттерн наблюдатель
   }
 
-
-}
-
-window.state = state;
-
-// addPost Funtion
-export const addPost = () => {
-  // debugger;
-    let newPost = {
-      id: 5,
-      message: state.postPage.newPostText,
-    };
-
-    state.postPage.posts.push(newPost);
-    state.postPage.newPostText = '';
-      rerenderEntireTree(state);
-}
-
-// Обновляем состояние
-export const updateNewPostText = (newText) => {
-  // debugger;
-
-    state.postPage.newPostText = newText;
-      rerenderEntireTree(state);
-}
-
-
-// Следим за состоянием
-export const subscribe = (observer) => {
-  rerenderEntireTree = observer; // паттерн наблюдатель
-}
-
-
-// Преобразуем в ООП
-let store = {
-  
 }
 
 
 
 
-export default state;
+window.store = store;
+
+
+export default store;
 
 // store - OOP
