@@ -157,8 +157,14 @@ export const subscribe = (observer) => {
 }
 
 
+// Преобразуем в ООП
+let store = {
+  
+}
 
 
 
 
 export default state;
+
+// store - OOP
