@@ -97,8 +97,7 @@ const App = (props) => {
                       () => <Posts 
                               state={props.state.postPage}
                               newPostText={props.state.postPage.newPostText}
-                              addPost={props.addPost}
-                              updateNewPostText={props.updateNewPostText}
+                              dispatch={props.dispatch}
                             /> }
                   />
                 </div>

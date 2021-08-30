@@ -29,6 +29,7 @@ import avatar2 from '../assets/details/img/avatar2.png';
 
 
 // Хранилище объектов
+// _ нижнее подчеркивание означает что это функиця/объект приватны
 let store = {
   _state: {
 
@@ -124,15 +125,25 @@ let store = {
   
   
   },
-  getState() {
-    return this._state;
-  },
   _callSubscriber() {
     console.log('State changed');
   },
-  // addPost Funtion
-  addPost() {
-    // debugger;
+
+  getState() {
+    return this._state;
+  },
+  // Следим за состоянием
+  subscribe(observer) {
+    this._callSubscriber = observer; // паттерн наблюдатель
+  },
+
+  // Метод при использовании которого, меняем внутри state что либо.
+  // передаём в dispatch объекты экшены
+  dispatch(action) { // { type: 'ADD-POST' }
+    
+    // Если у action тип равен и 'наше значение',
+    // Иначе если, тип будет равен другому значению, то делаем другое условие
+    if (action.type === 'ADD-POST') {
       let newPost = {
         id: 5,
         message: this._state.postPage.newPostText,
@@ -141,18 +152,14 @@ let store = {
       this._state.postPage.posts.push(newPost);
       this._state.postPage.newPostText = '';
       this._callSubscriber(this._state);
-  },
-  // Обновляем состояние
-  updateNewPostText(newText) {
+    } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+        this._state.postPage.newPostText = action.newText;
+        this._callSubscriber(this._state);
+    }
 
-    // debugger;
-    this._state.postPage.newPostText = newText;
-    this._callSubscriber(this._state);
-  },
-  // Следим за состоянием
-  subscribe(observer) {
-    this._callSubscriber = observer; // паттерн наблюдатель
+
   }
+
 
 }
 
